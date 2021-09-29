@@ -18,7 +18,6 @@ export class AddItemForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log('submit');
     }
 
     render() {
