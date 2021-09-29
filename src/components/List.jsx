@@ -3,7 +3,13 @@ import React, {Component} from 'react';
 export class List extends Component {
     render() {
         return (
-            null
+            <ul>
+                {
+                    this.props.items.map(item => (
+                        <li>{item}</li>
+                    ))
+                }
+            </ul>
         );
     }
 };
