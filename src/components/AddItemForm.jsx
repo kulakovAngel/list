@@ -18,6 +18,8 @@ export class AddItemForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
+        this.props.onSubmit(this.state.item);
+        this.setState({item: ''});
     }
 
     render() {
