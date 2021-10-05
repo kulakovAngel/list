@@ -6,7 +6,7 @@ export class List extends Component {
             <ul>
                 {
                     this.props.items.map(item => (
-                        <li>{item}</li>
+                        <li key={item.id}>{item.content}</li>
                     ))
                 }
             </ul>
