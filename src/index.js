@@ -12,3 +12,15 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+/**
+ * How to work with Vim:
+ * -> i
+ * -> input text (commit, etc)
+ * -> `esc`
+ * -> :wq
+ * -> `enter`
+ * 
+ * note:
+ * -> :qa - for exit without save
+ */
