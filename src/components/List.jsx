@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { ListItem } from './ListItem';
 
 export class List extends Component {
     render() {
@@ -6,7 +7,11 @@ export class List extends Component {
             <ul>
                 {
                     this.props.items.map(item => (
-                        <li key={item.id}>{item.content}</li>
+                        <ListItem
+                            key={item.id}
+                            item={item}
+                            onDelete={this.props.handleDeleteItem}
+                        />
                     ))
                 }
             </ul>

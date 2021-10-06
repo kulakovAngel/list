@@ -13,6 +13,7 @@ export class App extends Component {
         this.addItemToList = this.addItemToList.bind(this);
         this.createNewItem = this.createNewItem.bind(this);
         this.handleSubmitForm = this.handleSubmitForm.bind(this);
+        this.handleDeleteItem = this.handleDeleteItem.bind(this);
     }
 
     createNewItem(str) {
@@ -35,10 +36,19 @@ export class App extends Component {
         this.addItemToList(newItem);
     }
 
+    handleDeleteItem(id) {
+        this.setState(() => {
+            const newItems = this.state.items.filter(item => item.id !== id);
+            return ({
+                items: newItems,
+            });
+        });
+    }
+
     render() {
         return (
             <>
-                <List items={this.state.items} />
+                <List items={this.state.items} handleDeleteItem={this.handleDeleteItem} />
                 <AddItemForm onSubmit={this.handleSubmitForm} />
             </>
         );
